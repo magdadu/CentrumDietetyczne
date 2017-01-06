@@ -1,0 +1,12 @@
+{
+
+        "contact" : {
+
+
+            "name": "Imię",
+            "email": "Email",
+            "subject": "Temat",
+            "message": "Treść wiadomosci"
+        }
+
+}

@@ -1,0 +1,41 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div ng-switch="vm.isAuthenticated()">
+                <div class="alert alert-success" ng-switch-when="true">
+                    You are logged in as user "{{vm.account.login}}".
+                </div>
+
+                <div class="alert alert-warning" ng-switch-when="false">
+                   Nie masz jeszcze konta? <a class="alert-link" ui-sref="register">Zarejestruj się!</a>
+                </div>
+            </div>
+            <div class="container-fluid bg-1 text-center">
+                <div class="container-fluid bg-3 text-center">
+                    <h3 class="margin">Twoje zdrowie leży w Twoich rękach!</h3><br>
+                    <div class="row">
+                        <div class="col-sm-4"  ng-init="myVar = 'http://localhost:8080/#/contact'">
+                            <p> Umów się na spotkanie z naszym dietetykiem</p>
+                            <a ng-href="{{myVar}}"><span class="dietetician img-responsive img-rounded" ></span></a>
+                        </div>
+                        <div class="col-sm-4"  ng-init="myVar = 'http://localhost:8080/#/contact'">
+                            <p>Zamów dietę</p>
+                            <a ng-href="{{myVar}}"><span class="diet img-responsive img-rounded" ></span></a>
+                        </div>
+                        <div class="col-sm-4" ng-init="myVar = 'http://localhost:8080/#/contact'">
+                            <p>Skontaktuj się z naszymi dietetykami!</p>
+                            <a ng-href="{{myVar}}"><span class="contact img-responsive img-rounded" ></span></a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
