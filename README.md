@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # inzynierka
 
 This application was generated using JHipster 3.11.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.11.0](https://jhipster.github.io/documentation-archive/v3.11.0).
@@ -108,3 +109,6 @@ To set up a CI environment, consult the [Setting up Continuous Integration][] pa
 [Karma]: http://karma-runner.github.io/
 [Jasmine]: http://jasmine.github.io/2.0/introduction.html
 [Protractor]: https://angular.github.io/protractor/
+=======
+# Centrum
+>>>>>>> 45e6a3b6f99851a0447f197578f0737a3a5d0f6c
