@@ -1,0 +1,25 @@
+{
+    "inzynierkaApp": {
+        "dietappointment" : {
+            "home": {
+                "title": "Dietappointments",
+                "createLabel": "Create a new Dietappointment",
+                "createOrEditLabel": "Create or edit a Dietappointment",
+                "search": "Search for Dietappointment"
+            },
+            "created": "A new Dietappointment is created with identifier {{ param }}",
+            "updated": "A Dietappointment is updated with identifier {{ param }}",
+            "deleted": "A Dietappointment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Dietappointment {{ id }}?"
+            },
+            "detail": {
+                "title": "Dietappointment"
+            },
+            "date": "Date",
+            "hour": "Hour",
+            "client": "Client",
+            "dietetician": "Dietetician"
+        }
+    }
+}

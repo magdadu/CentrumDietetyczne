@@ -1,0 +1,113 @@
+
+<div class="container-fluid">
+    <h2><span data-translate="inzynierkaApp.diet.detail.title">Diet</span> {{vm.diet.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="inzynierkaApp.diet.name">Name</span></dt>
+        <dd>
+            <span>{{vm.diet.name}}</span>
+        </dd>
+    </dl>
+    <div class="row">
+
+        <div class="container-fluid">
+            <div class="col-sm-4">
+                <table class="jh-table table table-striped">
+                    <thead> <tr>
+                        <th>Produkty zalecane</th>
+
+                    </tr> </thead>
+                    <tr  ng-repeat="product in vm.diet_products_1">
+                        <td>{{product.product.name}}</td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <table class="jh-table table table-striped">
+                    <thead> <tr>
+                        <th>Produkty zalecane w niewielkich ilosciach</th>
+
+                    </tr> </thead>
+                    <tr  ng-repeat="product in vm.diet_products_2">
+                        <td>{{product.product.name}}</td>
+
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-sm-4">
+                <table class="jh-table table table-striped">
+                    <thead> <tr>
+                        <th>Produkty niezalecane</th>
+
+                    </tr> </thead>
+                    <tr  ng-repeat="product in vm.diet_products_3">
+                        <td>{{product.product.name}}</td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="container-fluid">
+                <h2>Jadłospis:</h2>
+            </div>
+            <table class="jh-table table table-striped">
+                <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="inzynierkaApp.meal.name">Name</span></th>
+                    <th><span data-translate="inzynierkaApp.meal.amount">Amount</span></th>
+                    <th><span data-translate="inzynierkaApp.meal.unit">Unit</span></th>
+                    <th><span data-translate="inzynierkaApp.meal.diet">Diet</span></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="meal in vm.meals track by meal.id">
+                    <td><a ui-sref="meal-detail({id:meal.id})">{{meal.id}}</a></td>
+                    <td>{{meal.name}}</td>
+                    <td>{{meal.amount}}</td>
+                    <td>{{meal.unit}}</td>
+                    <td>
+                        <a ui-sref="diet-detail({id:meal.diet.id})">{{meal.diet.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="meal-detail({id:meal.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="meal.edit({id:meal.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="meal.delete({id:meal.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="diet-detail.edit({id:vm.diet.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

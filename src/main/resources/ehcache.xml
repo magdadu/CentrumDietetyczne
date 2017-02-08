@@ -41,5 +41,45 @@
         timeToLiveSeconds="3600">
     </cache>
 
+    <cache name="wat.edu.pl.domain.Dietetician"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.DietAppointment"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Client"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Dietappointment"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Diet_product"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Diet"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Product"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Product.dietProducts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Meal"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="wat.edu.pl.domain.Result"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>

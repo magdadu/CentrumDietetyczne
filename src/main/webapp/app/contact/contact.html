@@ -1,17 +1,37 @@
+
 <div ng-cloak>
-<div ng-controller="ContactController">
+<div  ng-controller="ContactController">
     <div class="row">
         <div class="container">
-            <form novalidate class="simple-form">
+        <div class="col-md-6">
+            <form novalidate class="simple-form" >
                 <h1 translate="Skontaktuj się z nami!">Skontaktuj się z nami!</h1>
-                <label data-translate="name">Name: <input type="text" ng-model="user.name" /></label><br />
-                <label>E-mail: <input type="email" ng-model="user.email" /></label><br />
-                <label>Subject: <input type="text" ng-model="user.subject" /></label><br />
-                <label>Message: <input type="email" ng-model="user.message" /></label><br />
-                <input type="submit" ng-click="update(user)" value="SEND" />
+                <label>Imię: <input size="45" type="text" ng-model="vm.contact.firstname" /></label><br />
+                <label>Nazwisko: <input size="40" type="text" ng-model="vm.contact.lastname" /></label><br />
+                <label>E-mail: <input size="43" type="email" ng-model="vm.contact.email" /></label><br />
+                <label>Temat: <input size="43" type="text" ng-model="vm.contact.subject" /></label><br />
+                <label>Wiadomość: <textarea rows="4" cols="50"   type="text" ng-model="vm.contact.message" /></label>
+                <input type="button" value="Wyślij" ng-click="addMyContact()"  />
             </form>
-        </div>
+            </div>
+        <div class="col-md-6"></br>
+
+                <div class="panel-heading ">
+                    <span class="logofruit  img-responsive img-rounded"></span>
+                </div>
+                <div>
+
+                    </div><font color="black" size="3.2vw"><b>Adres: </b>Warszawa, Dietetyczna 15/6<br></font>
+                    <font color="black" size="3.2vw"><b>E‑mail: </b>centrum@dietetyczne.pl<br>
+
+
+                    </font><font  color="black" size="3.2vw"><b>Tel:</b>+48 555 555 555<br>
+</font><font  color="black" size="3.2vw"><h7>(telefon czynny w godz.&nbsp;08:00‑21:00)</h7></font>
+                </div>
+            </div>
+</div>
     </div>
+
 </div>
     </div>
 

@@ -6,6 +6,21 @@
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161213104712_added_entity_Contact.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170108121434_added_entity_Dietetician.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170108124756_added_entity_DietAppointment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170108134112_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170108124756_added_entity_Dietappointment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170111113813_added_entity_Diet_product.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170111114335_added_entity_Diet.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170111115119_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121142655_added_entity_Meal.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170122215959_added_entity_Result.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170108124756_added_entity_constraints_DietAppointment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170108124756_added_entity_constraints_Dietappointment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170108134112_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170111113813_added_entity_constraints_Diet_product.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121142655_added_entity_constraints_Meal.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170122215959_added_entity_constraints_Result.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

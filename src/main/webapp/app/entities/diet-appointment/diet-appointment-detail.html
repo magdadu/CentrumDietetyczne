@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="inzynierkaApp.dietAppointment.detail.title">Diet Appointment</span> {{vm.dietAppointment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="inzynierkaApp.dietAppointment.date">Date</span></dt>
+        <dd>
+            <span>{{vm.dietAppointment.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="inzynierkaApp.dietAppointment.hour">Hour</span></dt>
+        <dd>
+            <span>{{vm.dietAppointment.hour}}</span>
+        </dd>
+        <dt><span data-translate="inzynierkaApp.dietAppointment.client">Client</span></dt>
+        <dd>
+            <a ui-sref="client-detail({id:vm.dietAppointment.client.id})">{{vm.dietAppointment.client.id}}</a>
+        </dd>
+        <dt><span data-translate="inzynierkaApp.dietAppointment.dietetician">Dietetician</span></dt>
+        <dd>
+            <a ui-sref="dietetician-detail({id:vm.dietAppointment.dietetician.id})">{{vm.dietAppointment.dietetician.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="diet-appointment-detail.edit({id:vm.dietAppointment.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

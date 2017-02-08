@@ -1,0 +1,40 @@
+<div ng-cloak>
+<div ng-controller="dietAppointmentController">
+    <div class="row">
+        <div class="container">
+            <calendar selected="day"></calendar>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="initdietAppointment()">Pokaż szczegóły</button>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Grafik przyjmowania w dniu: {{day.format("YYYY-MM-DD")}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="calendarTable">
+                                <thead > <tr  >
+                                    <th>Godzina</th>
+                                    <th ng-repeat="y in vm.dieteticians">{{y.firstname}}{{y.lastname}}</th>
+                                </tr> </thead>
+                                <tr ng-repeat="x in vm.hours" >
+                                    <td>{{x}}:00</td>
+                                    <td ng-repeat="y in vm.dieteticians" class="reservation"><button  ng-attr-id="{{ 'object-' + x + '-' }}{{y.id}}" type="button" class="btn btn-info btn-sm" ng-disabled="isDisabled" ng-click="reserve(x,y.id,day)">Zarezerwuj</button></td>
+                                  </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+

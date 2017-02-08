@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "client",
+            "otherEntityName": "client",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "dietetician",
+            "otherEntityName": "dietetician",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "hour",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170108124756",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "diet_appointment",
+    "pagination": "no"
+}

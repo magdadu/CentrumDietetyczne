@@ -1,0 +1,25 @@
+{
+    "inzynierkaApp": {
+        "meal" : {
+            "home": {
+                "title": "Meals",
+                "createLabel": "Dodaj Meal",
+                "createOrEditLabel": "Dodaj lub edytuj: Meal",
+                "search": "Search for Meal"
+            },
+            "created": "A new Meal is created with identifier {{ param }}",
+            "updated": "A Meal is updated with identifier {{ param }}",
+            "deleted": "A Meal is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Meal {{ id }}?"
+            },
+            "detail": {
+                "title": "Meal"
+            },
+            "name": "Name",
+            "amount": "Amount",
+            "unit": "Unit",
+            "diet": "Diet"
+        }
+    }
+}

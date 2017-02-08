@@ -1,0 +1,65 @@
+<div>
+    <h2 data-translate="inzynierkaApp.result.home.title">Results</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="result.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="inzynierkaApp.result.home.createLabel">
+                        Create new Result
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="inzynierkaApp.result.resluts">Resluts</span></th>
+                    <th><span data-translate="inzynierkaApp.result.client_result">Client Result</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="result in vm.results track by result.id">
+                    <td><a ui-sref="result-detail({id:result.id})">{{result.id}}</a></td>
+                    <td>
+                        <a ng-if="result.resluts" ng-click="vm.openFile(result.reslutsContentType, result.resluts)">
+                            <img data-ng-src="{{'data:' + result.reslutsContentType + ';base64,' + result.resluts}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="result.resluts">{{result.reslutsContentType}}, {{vm.byteSize(result.resluts)}}</span>
+                    </td>
+                    <td>
+                        <a ui-sref="client-detail({id:result.client_result.id})">{{result.client_result.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="result-detail({id:result.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="result.edit({id:result.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="result.delete({id:result.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

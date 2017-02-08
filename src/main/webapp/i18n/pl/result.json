@@ -1,0 +1,23 @@
+{
+    "inzynierkaApp": {
+        "result" : {
+            "home": {
+                "title": "Results",
+                "createLabel": "Dodaj Result",
+                "createOrEditLabel": "Dodaj lub edytuj: Result",
+                "search": "Search for Result"
+            },
+            "created": "A new Result is created with identifier {{ param }}",
+            "updated": "A Result is updated with identifier {{ param }}",
+            "deleted": "A Result is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Result {{ id }}?"
+            },
+            "detail": {
+                "title": "Result"
+            },
+            "resluts": "Resluts",
+            "client_result": "Client Result"
+        }
+    }
+}

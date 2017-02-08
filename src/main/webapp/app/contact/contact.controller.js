@@ -5,29 +5,20 @@
         .module('inzynierkaApp')
         .controller('ContactController', ContactController);
 
-    ContactController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
+    ContactController.$inject = ['Contact','Message','$scope' ];
 
-    function ContactController ($scope, Principal, LoginService, $state) {
-        var vm = this;
 
-        vm.account = null;
-        vm.isAuthenticated = null;
-        vm.login = LoginService.open;
-        vm.register = register;
-        $scope.$on('authenticationSuccess', function() {
-            getAccount();
-        });
+       function ContactController (Contact,Message,$scope) {
+           var vm = this;
+           vm.contact = {};
+            vm.message= {};
+           $scope.addMyContact=function(){
 
-        getAccount();
+                console.log($scope.vm.contact);
+                Contact.save($scope.vm.contact);
+                Message.save($scope.vm.contact);
+            }
 
-        function getAccount() {
-            Principal.identity().then(function(account) {
-                vm.account = account;
-                vm.isAuthenticated = Principal.isAuthenticated;
-            });
-        }
-        function register () {
-            $state.go('register');
-        }
-    }
-})();
+
+       }
+   })();

@@ -1,0 +1,54 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDieteticianLabel" data-translate="inzynierkaApp.dietetician.home.createOrEditLabel">Create or edit a Dietetician</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.dietetician.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.dietetician.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="inzynierkaApp.dietetician.firstname" for="field_firstname">Firstname</label>
+            <input type="text" class="form-control" name="firstname" id="field_firstname"
+                    ng-model="vm.dietetician.firstname"
+                    required ng-minlength="1" />
+            <div ng-show="editForm.firstname.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.firstname.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.firstname.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="inzynierkaApp.dietetician.lastname" for="field_lastname">Lastname</label>
+            <input type="text" class="form-control" name="lastname" id="field_lastname"
+                    ng-model="vm.dietetician.lastname"
+                    required />
+            <div ng-show="editForm.lastname.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastname.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

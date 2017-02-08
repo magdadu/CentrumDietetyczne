@@ -1,3 +1,4 @@
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8,6 +9,10 @@ body {
 
 text-align: center;
 }
+table{
+width:100%;
+}
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -125,24 +130,42 @@ Main page styles
 .diet {
     display: inline-block;
     width: 100%;
-    height: 218px;
+    height: 218px!important;
     background: url("../images/diet.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.logofruit{
+   display: inline-block;
+    width: 200px!important;
+
+    height:80px!important;
+    background: url("../images/fruit.png") no-repeat center top;
     background-size: contain;
 }
 .contact {
     display: inline-block;
     width: 100%;
-    height: 218px;
+    height: 218px!important;
     background: url("../images/contact.jpg") no-repeat center top;
     background-size: contain;
 }
 .dietetician {
     display: inline-block;
     width: 100%;
-    height: 218px;
+    height: 218px!important;
     background: url("../images/dietetician.jpg") no-repeat center top;
     background-size: contain;
 }
+.reservation{
+    text-align:center;
+}
+
+.calendarTable{
+    width:100%;
+}
+
+
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
 @media
@@ -320,6 +343,7 @@ entity tables helpers
     /* Align text in td vertically (top aligned by Bootstrap) */
     vertical-align: middle;
 }
+
 
 .jh-table > thead > tr > th > .glyphicon-sort, .jh-table > thead > tr > th > .glyphicon-sort-by-attributes, .jh-table > thead > tr > th > .glyphicon-sort-by-attributes-alt {
     /* less visible sorting icons */

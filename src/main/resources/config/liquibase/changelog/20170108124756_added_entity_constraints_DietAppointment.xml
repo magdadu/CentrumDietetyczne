@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Dietappointment.
+    -->
+    <changeSet id="20170108124756-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="diet_appointment"
+                                 constraintName="fk_dietappointment_client_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="client"/>
+
+        <addForeignKeyConstraint baseColumnNames="dietetician_id"
+                                 baseTableName="diet_appointment"
+                                 constraintName="fk_dietappointment_dietetician_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dietetician"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+{
+    "inzynierkaApp": {
+        "product" : {
+            "home": {
+                "title": "Products",
+                "createLabel": "Dodaj Product",
+                "createOrEditLabel": "Dodaj lub edytuj: Product",
+                "search": "Search for Product"
+            },
+            "created": "A new Product is created with identifier {{ param }}",
+            "updated": "A Product is updated with identifier {{ param }}",
+            "deleted": "A Product is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Product {{ id }}?"
+            },
+            "detail": {
+                "title": "Product"
+            },
+            "name": "Name",
+            "dietProduct": "Diet Product"
+        }
+    }
+}

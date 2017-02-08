@@ -1,0 +1,23 @@
+{
+    "inzynierkaApp": {
+        "diet_product" : {
+            "home": {
+                "title": "Diet Products",
+                "createLabel": "Dodaj Diet Product",
+                "createOrEditLabel": "Dodaj lub edytuj: Diet Product",
+                "search": "Search for Diet Product"
+            },
+            "created": "A new Diet Product is created with identifier {{ param }}",
+            "updated": "A Diet Product is updated with identifier {{ param }}",
+            "deleted": "A Diet Product is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Diet Product {{ id }}?"
+            },
+            "detail": {
+                "title": "Diet Product"
+            },
+            "isRecommended": "Is Recommended",
+            "diet": "Diet"
+        }
+    }
+}

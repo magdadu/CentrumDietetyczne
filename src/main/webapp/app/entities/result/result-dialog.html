@@ -1,0 +1,54 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myResultLabel" data-translate="inzynierkaApp.result.home.createOrEditLabel">Create or edit a Result</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.result.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.result.id" readonly />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setResluts($file, vm.result)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="inzynierkaApp.result.resluts" for="field_resluts">Resluts</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.result.reslutsContentType + ';base64,' + vm.result.resluts}}" style="max-height: 100px;" ng-if="vm.result.resluts"/>
+                <div ng-if="vm.result.resluts" class="help-block clearfix">
+                    <span class="pull-left">{{vm.result.reslutsContentType}}, {{vm.byteSize(vm.result.resluts)}}</span>
+                    <button type="button" ng-click="vm.result.resluts=null;vm.result.reslutsContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setResluts($file, vm.result)" accept="image/*" data-translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="resluts" id="field_resluts"
+                    ng-model="vm.result.resluts"
+                     />
+            <input type="hidden" class="form-control" name="reslutsContentType" id="field_reslutsContentType"
+                    ng-model="vm.result.reslutsContentType" />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="inzynierkaApp.result.client_result" for="field_client_result">Client Result</label>
+            <select class="form-control" id="field_client_result" name="client_result" ng-model="vm.result.client_result" ng-options="client as client.id for client in vm.clients track by client.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -55,6 +55,7 @@ public class AccountResource {
     @Inject
     private MailService mailService;
 
+
     /**
      * POST  /register : register the user.
      *

@@ -1,0 +1,58 @@
+<div ng-cloak>
+<div ng-controller="MessageController">
+
+    <div class="row">
+        <div class="container-fluid">
+
+                <h1 translate="Skrzynka Odbiorcza">Skrzynka Odbiorcza</h1>
+            <table>
+                <thead> <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>E-mail</th>
+                    <th>Temat</th>
+                    <th>Wiadomość</th>
+                    <th></th>
+                </tr> </thead>
+                <tr ng-repeat="x in vm.messages">
+                    <td><b>{{x.firstname}}</b></td>
+                    <td><b>{{x.lastname}}</b></td>
+                    <td><b>{{x.email}}</b></td>
+                    <td><b>{{x.subject}}</b></td>
+                    <td><b>{{x.message}}</b></td>
+                    <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal" >Odpowiedz</button></td>
+                </tr>
+            </table>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Odpowiedz na wiadomość od: Magdalena Duchnik</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form novalidate class="simple-form" >
+
+                                <label>Temat: <input size="43" type="text" ng-model="vm.contact.subject" /></label><br />
+                                <label>Wiadomość: <textarea rows="4" cols="50"   type="text" ng-model="vm.contact.message" /></label>
+                                <input type="button" value="Wyślij" ng-click="addMyContact()"  />
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+
+
+

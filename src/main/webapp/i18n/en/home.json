@@ -1,17 +1,15 @@
 {
     "home": {
-        "title": "Welcome, Java Hipster!",
+        "title": "Your health depends on you!",
         "subtitle": "This is your homepage",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
         "question": "If you have any question on JHipster:",
         "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster on Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "chat": "JHipster public chat room",
-            "follow": "follow @java_hipster on Twitter"
+            "dietappointment": "Make an appointment with our dietetician!",
+            "order": "Order a diet!",
+            "contact": "Contact our dieteticians!"
         },
         "like": "If you like JHipster, don't forget to give us a star on",
         "github": "GitHub"

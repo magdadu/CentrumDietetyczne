@@ -26,7 +26,7 @@ import java.util.Optional;
 public class ContactResource {
 
     private final Logger log = LoggerFactory.getLogger(ContactResource.class);
-        
+
     @Inject
     private ContactRepository contactRepository;
 

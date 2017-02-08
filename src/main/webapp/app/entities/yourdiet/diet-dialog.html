@@ -1,0 +1,55 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDietLabel" data-translate="inzynierkaApp.diet.home.createOrEditLabel">Create or edit a Diet</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.diet.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.diet.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="inzynierkaApp.diet.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.diet.name"
+                     />
+        </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+        Dodaj dzień </button>
+        <h1 translate="">Dzień 1</h1>
+        <table>
+            <thead> <tr>
+                <th>ID</th>
+                <th>Nazwa posiłku</th>
+                <th>Ilość</th>
+                <th>Jednostka</th>
+                <th></th>
+            </tr> </thead>
+            <tr ng-repeat="x in vm.messages">
+                <td><b>{{x.firstname}}</b></td>
+                <td><b>{{x.lastname}}</b></td>
+                <td><b>{{x.email}}</b></td>
+
+
+
+            </tr>
+
+        </table>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            Dodaj  posiłek</button>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

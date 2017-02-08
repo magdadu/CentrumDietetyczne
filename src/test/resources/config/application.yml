@@ -19,9 +19,9 @@ spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:inzynierka;DB_CLOSE_DELAY=-1
-        name:
-        username:
-        password:
+        name: centrumdietetyczne
+        username: root
+        password: Smng2016!
     jpa:
         database-platform: wat.edu.pl.domain.util.FixedH2Dialect
         database: H2

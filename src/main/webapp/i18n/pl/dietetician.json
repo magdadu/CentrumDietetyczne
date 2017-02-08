@@ -1,0 +1,23 @@
+{
+    "inzynierkaApp": {
+        "dietetician" : {
+            "home": {
+                "title": "Dieteticians",
+                "createLabel": "Dodaj Dietetician",
+                "createOrEditLabel": "Dodaj lub edytuj: Dietetician",
+                "search": "Search for Dietetician"
+            },
+            "created": "A new Dietetician is created with identifier {{ param }}",
+            "updated": "A Dietetician is updated with identifier {{ param }}",
+            "deleted": "A Dietetician is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Dietetician {{ id }}?"
+            },
+            "detail": {
+                "title": "Dietetician"
+            },
+            "firstname": "Firstname",
+            "lastname": "Lastname"
+        }
+    }
+}

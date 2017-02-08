@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "diet_meal",
+            "otherEntityName": "diet",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "unit",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170121142655",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "meal",
+    "pagination": "no"
+}

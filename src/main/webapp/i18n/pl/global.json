@@ -8,13 +8,31 @@
             "entities": {
                 "main": "Encje",
                 "contact": "Contact",
+                "dietetician": "Dietetician",
+                "dietAppointment": "Diet Appointment",
+                "client": "Client",
+                "dietappointment": "Dietappointment",
+                "dietProduct": "Diet Product",
+                "diet": "Diet",
+                "product": "Product",
+                "meal": "Meal",
+                "result": "Result",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "creatediet": {
+                "main": "Stworz diete"
             },
             "contact": {
                 "main": "Kontakt"
             },
             "diet": {
                 "main": "Dieta"
+            },
+            "dietAppointment": {
+                "main": "Umów spotkanie"
+            },
+            "message": {
+                "main": "Wiadomość"
             },
             "account": {
                 "main": "Konto",

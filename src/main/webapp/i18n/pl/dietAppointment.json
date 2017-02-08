@@ -1,0 +1,25 @@
+{
+    "inzynierkaApp": {
+        "dietappointment" : {
+            "home": {
+                "title": "Dietappointments",
+                "createLabel": "Dodaj Dietappointment",
+                "createOrEditLabel": "Dodaj lub edytuj: Dietappointment",
+                "search": "Search for Dietappointment"
+            },
+            "created": "A new Dietappointment is created with identifier {{ param }}",
+            "updated": "A Dietappointment is updated with identifier {{ param }}",
+            "deleted": "A Dietappointment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Dietappointment {{ id }}?"
+            },
+            "detail": {
+                "title": "Dietappointment"
+            },
+            "date": "Date",
+            "hour": "Hour",
+            "client": "Client",
+            "dietetician": "Dietetician"
+        }
+    }
+}
